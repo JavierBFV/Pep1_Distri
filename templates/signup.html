@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Python Flask Bucket List App</title>
+
+    <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="http://getbootstrap.com/examples/jumbotron-narrow/jumbotron-narrow.css" rel="stylesheet">
+
+    <link href="../static/css/signup.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="../static/js/signUp.js"></script>
+
+  </head>
+
+  <body>
+
+    <div class="container">
+      <div class="header">
+        <nav>
+          <ul class="nav nav-pills pull-right">
+            <li role="presentation" ><a href="main">Home</a></li>
+            <li role="presentation"><a href="#">Sign In</a></li>
+            <li role="presentation" class="active"><a href="#">Consigue tu permiso</a></li>
+          </ul>
+        </nav>
+        <h3 class="text-muted">Python Flask App</h3>
+      </div>
+
+      <div class="jumbotron">
+        <h1>Bucket List App</h1>
+        <form class="form-signin">
+
+        <label for="inputRut" class="sr-only">Rut</label>
+        <input name="inputRut" id="inputRut" class="form-control" placeholder="Rut" maxlength="15" required autofocus><br>
+
+        <label for="inputName" class="sr-only">Nombre</label>
+        <input name="inputName" id="inputName" class="form-control" placeholder="Name" maxlength="45" required autofocus><br>
+
+        <label for="inputDireccion" class="sr-only">Direccion</label>
+        <input type="direccion" name="inputDireccion" id="inputDireccion" class="form-control" placeholder="Direccion" maxlength="100" required autofocus><br>
+
+        <label for="inputMotivo" class="sr-only">Motivo</label>
+        <input name="inputMotivo" id="inputMotivo" class="form-control" placeholder="Motivo" maxlength="300" required><br><br>
+
+        <label for="inputFecha" class="sr-only">Fecha</label>
+        <input type="date" name="inputFecha" id="inputFecha" class="form-control" required><br>
+
+        <label for="inputTiempo" class="sr-only">Tiempo</label>
+        <input type="time" name="inputTiempo" id="inputTiempo" class="form-control" required><br><br>
+
+        <button id="btnSignUp" class="btn btn-lg btn-primary btn-block" type="button">Solicitar</button>
+
+
+
+      </form>
+      </div>
+
+
+
+      <footer class="footer">
+        <p>&copy; Company 2015</p>
+      </footer>
+
+    </div>
+  </body>
+</html>
