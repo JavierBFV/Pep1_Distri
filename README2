@@ -1,0 +1,41 @@
+Características de un sistema distribuido:
+
+
+
+‌Transparencia: Se cumple, gracias a que el sistema actualmente es, en efecto, un solo equipo trabajando, por lo uqe da esa impresion de transparencia.
+
+	Acceso: Se cumple, parcialmente, pues se oculta las diferentes representaciones de datos en los diferentes O/S, pero se debe más al hecho de que todo se escribe y almacena con la misma nomesclaruta que es interpretable por todos los O/S.
+
+	Ubicación: Se cumple.
+
+	Migración: No se cumple. No existe la función para mover los recursos.
+
+	Relocalización: Se cumple, pusto de que no existe movimiento de recursos, el usuario nunca notara que el recurso no esta disponible por relocalización.
+
+	Replicación: Se cumple. El usuario nunca es informado de la replicacion de sus datos, puesto que estos nunca son replicados.
+
+	Concurrencia: Se cumple.
+
+	Falla: No se cumple, el sistema esta en solo un equipo, si este equipo cae, el programa cae con él.
+
+	Persistencia. Se cumple.
+
+
+‌Escalabilidad: No se cumple la escalabilidad horizontal, puesto que el sistema no esta desarrollado para soportarlos. Se cumple en el caso de escalabilidad vertical.
+
+	Particionar: Puede ser particionado, pero no esta particionado en la actualidad.
+
+	Replicar: No se cumple. El sistema no realiza replicas.
+
+	Cache: No se cumple. El sistema no posee ni se ve en la necesidad de implementar Cache, puesto de que no es capaz de recuperar datos.
+
+
+‌Disponibilidad: Es baja. Todo esta implementado en un computador, por lo que si este se cae, todo el programa se cae.
+
+
+‌Heterogeneidad del hardware: 
+‌Disposición de recursos.
+‌Apertura.
+	Interoperabilidad.
+	Portabilidad.
+	Fácil extensión.
