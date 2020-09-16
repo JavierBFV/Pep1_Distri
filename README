@@ -72,7 +72,7 @@ Características de un sistema distribuido y solucion para las caracteristicas q
 	Cache: No se cumple. El sistema no posee ni se ve en la necesidad de implementar Cache, puesto de que no es capaz de recuperar datos. Ademas puesto que el usuario no suele entrar muchas veces seguidas para crear un permiso, gracias a la naturaleza del problema.
 
 
-‌Disponibilidad: Es baja. Todo esta implementado en un computador, por lo que si este se cae, todo el programa se cae. Solución: El aplicar
+‌Disponibilidad: Es baja. Todo esta implementado en un computador, por lo que si este se cae, todo el programa se cae. Solución: El aplicar las soluciones sugeridas anteriormente tienen como una de sus consecuencias hacer que el sistema pueda aguantar más los fallos, por lo que se resolveria la disponibilidad de este programa.
 
 
 ‌Heterogeneidad del hardware: No se cumple, en gran parte puesto que todo esta distribuido en la misma maquina, y no hay una fuerte diferencia entre el frontend y el backend.
