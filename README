@@ -36,3 +36,55 @@ Lista de características deseadas en un sistema distribuido:
 - Disponibilidad: La disponibilidad del sistema es baja, puesto que todo está elaborado en un solo computador, si este servicio se ve interrumpido, ningún usuario puede ingresar una petición.
 
 - Tolerancia al error: Al igual que como se explicó en disponibilidad, si el servicio falla en el computador que soporta la aplicación, todo se cae. Pero el código si tiene funciones para prevenir algún "Crash" en el caso de detectarse un error.
+
+
+############## Actualizacion para PEP02 #######################
+
+Características de un sistema distribuido y solucion para las caracteristicas que no se cumplen:
+
+
+
+‌Transparencia: Se cumple, gracias a que el sistema actualmente es, en efecto, un solo equipo trabajando, por lo uqe da esa impresion de transparencia.
+
+	Acceso: Se cumple, parcialmente, pues se oculta las diferentes representaciones de datos en los diferentes O/S, pero se debe más al hecho de que todo se escribe y almacena con la misma nomesclaruta que es interpretable por todos los O/S.
+
+	Ubicación: Se cumple.
+
+	Migración: Se cumple. No existe función para mover los recursos, por lo que el usuario nunca se entera del movimiento de estos.
+
+	Relocalización: Se cumple, pusto de que no existe movimiento de recursos, el usuario nunca notara que el recurso no esta disponible por relocalización.
+
+	Replicación: Se cumple. El usuario nunca es informado de la replicacion de sus datos, puesto que estos nunca son replicados.
+
+	Concurrencia: Se cumple.
+
+	Falla: No se cumple, el sistema esta en solo un equipo, si este equipo cae, el programa cae con él. Solución: se puede crear un nodo maestro que dirija al usuario a un backend de respaldo cuando el backend normal sufre un fallo, proceso que no debería de porque notarse por parte del usuario. Ademas en cuanto a la base de datos, se puede hacer una replica, lo que serviría como respaldo en el caso de que la base de dato sufriera una falla.
+
+	Persistencia. Se cumple.
+
+
+‌Escalabilidad: No se cumple la escalabilidad horizontal, puesto que el sistema no esta desarrollado para soportarlos. Se cumple en el caso de escalabilidad vertical. Solución: Si las funcionalidades del código se pueden separar, como por decirlo así, tener más backends, seria posible separar estas en distintos computadores, lo que permitiría al programa ser apto para aceptar escalabilidad horizontal.
+
+	Particionar: Puede ser particionado, pero no esta particionado en la actualidad. Aunque el particionamiento se puede mejorar gracias a las mejoras sugeridas anteriormente y al separar con mayor claridad el frontend del backend, como por el uso de una conexion API entre estos.
+
+	Replicar: No se cumple. El sistema no realiza replicas. Solución: Aunque se escuche redundante, la solución a esta característica es la creación de replicas, ya sea tener distintas replicas del backend con el propósito de que cada una se encargue de una funcionalidad. Esto ayuda a no solo soportar las fallas en caso de que uno de estas replicas falle, sino que también puede aligerar la carga de uno de estos sistemas al implementar tecnología de nodo maestro (ya sea usando Kafka o Apache Storm) para manejar el flujo de datos entre todas las replicas.
+
+	Cache: No se cumple. El sistema no posee ni se ve en la necesidad de implementar Cache, puesto de que no es capaz de recuperar datos. Ademas puesto que el usuario no suele entrar muchas veces seguidas para crear un permiso, gracias a la naturaleza del problema.
+
+
+‌Disponibilidad: Es baja. Todo esta implementado en un computador, por lo que si este se cae, todo el programa se cae. Solución: El aplicar
+
+
+‌Heterogeneidad del hardware: No se cumple, en gran parte puesto que todo esta distribuido en la misma maquina, y no hay una fuerte diferencia entre el frontend y el backend.
+
+
+‌Disposición de recursos: No se cumple puesto que la aplicación esta en formato local, lo que imposibilita el acceso para cualquier usuario que no este en el computador que esta ejecutando el programa. Solución: Si el programa se ejecuta por medio de un servidor publico, existiria más acceso al recurso por parte de los usuarios.
+
+
+‌Apertura: Se cumple, puesto que el codigo es tan sencillo que es relativamente facil el extender sus funcionalidades.
+
+	Interoperabilidad: No se cumple, pero el programa no requiere la comunicación con otros computadores o sistemas externos.
+
+	Portabilidad: Se cumple parcialmetne puesto que el codigo es muy sencillo, por lo que se puede incorporar en otros sistemas.
+
+	Fácil extensión: Se cumple. Como el sistema elaborado es tan básico, la incorporación de nuevos componentes es relativamente sencilla.
