@@ -1,3 +1,7 @@
+Prueba de Javier Frez valdenegro.
+Un dato antes de leer y ver todo. Le pido disculpas por el atraso de la pep, planeaba entregar un contenido similar a la hora correspondiente. pero gracias a un problema con VTR, la mayor parte de ayer y hoy (22 y 23 de agosto) estuve sin internet. Si hubiera podido trabajar en esas horas, hubiera entregado un trabajo similar a este (no voy a mentir), o talvez ligeramente mas avanzado.
+Lamento mucho los inconvenientes, es el primer programa que hago donde tengo que conectarme con una base de datos (en los cursos anteriores siempre que empezaba a trabajar en el codigo, la conexion ya estaba hecha) y de verdad que debi de haber avanzado en esta pep desde antes.
+
 Explicación de cómo funciona el programa.
 
 - El archivo principal, el backend es "app.py", el programa entero funciona al ejecutar ese programa.
